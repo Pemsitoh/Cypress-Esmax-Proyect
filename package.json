@@ -1,0 +1,15 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open --browser chrome --e2e",
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.1"
+  }
+}
