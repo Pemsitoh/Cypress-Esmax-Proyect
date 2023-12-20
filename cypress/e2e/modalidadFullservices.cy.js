@@ -30,7 +30,7 @@ describe('Se cambia a la modalidad Fullservices desde Configuración - Sistema',
         //4- En el desplegable elegimos la opción "Misceláneas"
           onSystemConfigurationPage.selectDropdownOptions('Misceláneas')
         //5- Seleccionamos en el dropdown "Modalidad de Venta en Isla" la opción "Full Service" y guardamos
-          //onSystemConfigurationPage.selectModalidad('Full Service')
+          onSystemConfigurationPage.selectModalidad('Full Service')
         //6- Seleccionamos en los botones superiores el botón "Sistema"
           onSystemConfigurationPage.selectTopButton('sistema')
         //7- Completamos todos los campos para pasar a Modalidad Fullservices y guardamos
