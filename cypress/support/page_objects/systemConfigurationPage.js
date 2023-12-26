@@ -1,7 +1,7 @@
 export class systemConfigurationPage{
 
     selectTopButton(btnnavigation){
-        cy.get('div.btn-group-sm').find('a').contains(btnnavigation,{matchCase :false}).click()
+        cy.get('div.btn-group-sm').find('a').contains(btnnavigation,{matchCase :false}).click({force: true})
     }
 
     selectDropdownOptions(option){
@@ -24,8 +24,8 @@ export class systemConfigurationPage{
             cy.wrap(tableRow).find('[id="635ac75764cd14a0490a3383"]').clear()
         })
         cy.get('tbody').find('[title="store.fuelController.close.performCloseValidations"]').then(tableRow=>{
-            cy.wrap(tableRow).find('[id="64831d635f512719f10e4aa7"]').clear().type('false')
-            cy.wrap(tableRow).find('[id="64831d635f512719f10e4aa7"]').invoke('prop','value').should('contain', 'false')
+            cy.wrap(tableRow).find('[id="64831d635f512719f10e4aa7"]').clear().type('true')
+            cy.wrap(tableRow).find('[id="64831d635f512719f10e4aa7"]').invoke('prop','value').should('contain', 'true')
         })
         cy.get('tbody').find('[title="store.fuelController.additionalSaleStatusesToShowOnStatus"]').then(tableRow=>{
             cy.wrap(tableRow).find('[id="62f645970ff43379793b2a6f"]').clear().type('over_invoiced_not_conciliated, under_invoiced_not_conciliated')
@@ -47,6 +47,10 @@ export class systemConfigurationPage{
         cy.get('tbody').find('[title="store.fuelController.additionalSaleStatusesToInvoice"]').then(tableRow=>{
             cy.wrap(tableRow).find('[id="626832f87594d8e610864c5a"]').clear().type('fleet')
             cy.wrap(tableRow).find('[id="626832f87594d8e610864c5a"]').invoke('prop','value').should('contain', 'fleet')
+        })
+        cy.get('tbody').find('[title="store.fuelController.additionalSaleStatusesToShowOnStatus"]').then(tableRow=>{
+            cy.wrap(tableRow).find('[id="62f645970ff43379793b2a6f"]').clear().type('over_invoiced_not_conciliated, under_invoiced_not_conciliated, fleet')
+            cy.wrap(tableRow).find('[id="62f645970ff43379793b2a6f"]').invoke('prop','value').should('contain','over_invoiced_not_conciliated, under_invoiced_not_conciliated, fleet')
         })
         cy.get('tbody').find('[title="store.fuelController.additionalSaleStatusesToAutoInvoice"]').then(tableRow=>{
             cy.wrap(tableRow).find('[id="635ac75764cd14a0490a3383"]').clear().type('over_invoiced_not_conciliated, under_invoiced_not_conciliated')
