@@ -9,7 +9,7 @@ describe('Se cambia a la modalidad Caseta desde Configuración - Sistema',()=>{
         onLoginPage.logIn('suser', 'suser123456')
       })
 
-      it('Seleccionar Modalidad Prepago', ()=>{
+      it('Seleccionar Modalidad Prepago y luego rellenar la configuración de caseta', ()=>{
 
         //reportes = 0
         //inventario = 1

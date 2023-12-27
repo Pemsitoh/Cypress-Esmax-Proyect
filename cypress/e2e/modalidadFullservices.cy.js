@@ -9,7 +9,7 @@ describe('Se cambia a la modalidad Fullservices desde Configuración - Sistema',
         onLoginPage.logIn('suser', 'suser123456')
       })
 
-      it('Seleccionar Modalidad FullService', ()=>{
+      it('Seleccionar Modalidad FullService y luego rellenar los campos de FullService', ()=>{
 
         //reportes = 0
         //inventario = 1

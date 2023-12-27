@@ -1,8 +1,7 @@
-import { onClientsAdmPage } from "../support/page_objects/clientsAdmPage"
-import { onClientsPage } from "../support/page_objects/clientsPage"
-import { HomePage, onHomePage } from "../support/page_objects/homePage"
-import { onLoginPage } from "../support/page_objects/loginPage"
-import { onSystemConfigurationPage } from "../support/page_objects/systemConfigurationPage.js"
+import { onClientsAdmPage } from "../support/page_objects/clientsAdmPage.js"
+import { onClientsPage } from "../support/page_objects/clientsPage.js"
+import { HomePage, onHomePage } from "../support/page_objects/homePage.js"
+import { onLoginPage } from "../support/page_objects/loginPage.js"
 const {generarRUT} = require('../support/GeneradorRUT.js')
 
 describe('Casos Clientes', () => {
