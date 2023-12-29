@@ -28,7 +28,7 @@ export class ClientsAdmPage{
         cy.get('.active-result').contains(giro,{timeout:10000}).click()
         cy.get('.chosen-single').find('span').should('contain', giro)
         cy.get('#create').click()
-        ValidarRut(RUT+1)
+        ValidarRut()
 
     }
 
